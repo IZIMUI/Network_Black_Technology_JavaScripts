@@ -28,6 +28,7 @@ function HOST_Judge(HOST) {
   for (let Value = 0; Value < HOST_List.length; Value++)
     if (HOST == HOST_List[Value])
       return true;
+      return false;
 };
 
 function FindProxyForURL(URL, HOST) {

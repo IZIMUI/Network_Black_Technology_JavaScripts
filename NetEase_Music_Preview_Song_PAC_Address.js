@@ -34,7 +34,7 @@ function HOST_Judges(HOST) {
 function FindProxyForURL(URL, HOST) {
   const HOST_Judge = HOST_Judges(HOST);
   if (HOST_Judge == true)
-    return "PROXY 106.52.127.72:19951";
+    return "PROXY 106.52.127.72:19951;";
   else if (HOST_Judge == false)
-    return "DIRECT";
+    return "DIRECT;";
 };

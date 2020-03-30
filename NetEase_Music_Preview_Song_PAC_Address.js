@@ -34,8 +34,8 @@ return Result_Value;
 };
 
 function FindProxyForURL (URL, HOST) {
-if (HOST_Judge(HOST) == true) {
+if (HOST_Judge(HOST) == true)
 return "PROXY 106.52.127.72:19951";
-};
+else
 return "DIRECT";
 }

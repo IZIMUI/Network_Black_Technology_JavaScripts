@@ -28,11 +28,11 @@ function HOST_Judges(HOST) {
   for (let Value = 0; Value < HOST_List.length; Value++)
     if (HOST == HOST_List[Value])
       return true;
-      return false;
+  return false;
 };
 
 function FindProxyForURL(URL, HOST) {
-  const HOST_Judge = HOST_Judges(HOST);   
+  const HOST_Judge = HOST_Judges(HOST);
   if (HOST_Judge == true)
     return "PROXY 106.52.127.72:19951";
   else if (HOST_Judge == false)

@@ -19,18 +19,17 @@ const HOST_List = new Array(
 "115.236.121.1",
 "112.13.122.1",
 "112.13.119.17",
-"103.126.92.132");
+"103.126.92.132"
+);
 
 function HOST_Judge (HOST) {
-let Result_Value;
 for (let Value = 0; Value < HOST_List.length; Value++)
 if (HOST == HOST_List[Value]){
-Result_Value = true;
+return true;
 break;
 } else {
-Result_Value = false;
+return false;
 };
-return Result_Value;
 };
 
 function FindProxyForURL (URL, HOST) {

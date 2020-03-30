@@ -24,7 +24,7 @@ const HOST_List = new Array(
   "223.252.199.67"
 );
 
-function HOST_Judge(HOST) {
+function HOST_Judges(HOST) {
   for (let Value = 0; Value < HOST_List.length; Value++)
     if (HOST == HOST_List[Value])
       return true;
@@ -32,8 +32,9 @@ function HOST_Judge(HOST) {
 };
 
 function FindProxyForURL(URL, HOST) {
-  if (HOST_Judge(HOST) == true)
+  const HOST_Judge = HOST_Judges(HOST);   
+  if (HOST_Judge == true)
     return "PROXY 106.52.127.72:19951";
-  else
+  else if (HOST_Judge == false)
     return "DIRECT";
 };
